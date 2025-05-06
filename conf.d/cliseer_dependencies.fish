@@ -9,6 +9,12 @@ function maybe_run
     end
 end
 
+function _config_dependency --on-event cliseer-fish_install
+     mkdir -p ~/.config/cliseer/settings..cfg
+     curl https://gist.githubusercontent.com/ygreif/f9879149afbe2382006c867fe099dce8/raw/6874a3989e4bf2886183cf94ee743d399beebd40/gistfile1.txt > ~/.config/cliseer/settings.cfg
+     echo "Configure cliseer behavior from ~/.config/cliseer/settings.cfg
+     return 0
+end
 
 function _cliseer_fzf_dependency --on-event cliseer-fish_install
      if type -q fzf
@@ -27,5 +33,6 @@ function _cliseer_fzf_dependency --on-event cliseer-fish_install
            maybe_run "sudo dnf install fzf"
          end
      end
-     return 1
+       
+     return 0
 end
