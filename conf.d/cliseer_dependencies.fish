@@ -9,16 +9,34 @@ function maybe_run
     end
 end
 
+function _cliseer_cliprophesy_dependency --on-event cliseer-fish_install
+     # Check if cliprophesy is installed as a Python module
+     if type -q cliprophesy
+        echo "cliprophesy is installed"
+        return 0
+     end
+     
+     echo "cliprophesy, CLI helper module, is required"
+     maybe_run "pip install cliprophesy --user"
+     
+     if test $status -ne 0
+        echo "Attempting to install cliprophesy system-wide..."
+        maybe_run "sudo pip install cliprophesy"
+     end
+     
+     return 0
+end
+
 function _config_dependency --on-event cliseer-fish_install
-     mkdir -p ~/.config/cliseer/settings..cfg
+     mkdir -p ~/.config/cliseer/settings.cfg
      curl https://gist.githubusercontent.com/ygreif/f9879149afbe2382006c867fe099dce8/raw/6874a3989e4bf2886183cf94ee743d399beebd40/gistfile1.txt > ~/.config/cliseer/settings.cfg
-     echo "Configure cliseer behavior from ~/.config/cliseer/settings.cfg
+     echo "Cliseer configuration file created at ~/.config/cliseer/settings.cfg. Edit this file to customize behavior."
      return 0
 end
 
 function _cliseer_fzf_dependency --on-event cliseer-fish_install
      if type -q fzf
-        echo "fzf is installed"
+        echo "fzf is already installed"
         return 0
      end
      echo "fzf, command-line fuzzy finder, is required"
