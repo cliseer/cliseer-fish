@@ -21,9 +21,10 @@ function _cliseer_cliprophesy_dependency --on-event cliseer_dependencies_install
      
      if test $status -ne 0
         echo "Attempting to install cliprophesy system-wide..."
-        maybe_run "sudo pip install cliprophesy"
+        maybe_run "pip install cliprophesy"
      end
-     
+
+     set -Ux __cliseer_bin_dir (python3 -m site --user-base)/bin
      return 0
 end
 
