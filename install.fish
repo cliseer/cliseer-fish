@@ -43,7 +43,7 @@ for conf_file in "$fish_conf_dir"/cliseer*.fish
         source "$conf_file" 2>/dev/null || true
     end
 end
-emit cliseer-fish_install
+emit cliseer_dependencies_install
 
 echo "$green Installation complete! Cliseer has been installed. $normal"
 echo "You can use $yellow Ctrl+Space $normal or $yellow Ctrl+S $normal to activate cliseer suggestions."
