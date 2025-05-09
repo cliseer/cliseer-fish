@@ -2,6 +2,8 @@
 
 Press `Ctrl+Space` in your terminal to activate AI powered command line suggestions.
 
+[![asciicast](https://asciinema.org/a/afGre4OygSlXqD9YHDSdWL14z.svg)](https://asciinema.org/a/afGre4OygSlXqD9YHDSdWL14z)
+
 ## Features
 
 * Context-aware command suggestions
