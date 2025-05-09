@@ -2,7 +2,7 @@
 
 Press `Ctrl+Space` in your terminal to activate AI powered command line suggestions.
 
-[![asciicast](https://asciinema.org/a/jtaZXEQgWS4W4ZSck17fnMqJK.svg)](https://asciinema.org/a/jtaZXEQgWS4W4ZSck17fnMqJK)
+![Preview](./.github/demo.gif)
 
 ## Features
 
