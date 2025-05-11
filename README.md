@@ -68,6 +68,10 @@ By default, CLISeer uses the `cliseer` provider, which offers a rate-limited num
 
 This data may inadvertently include sensitive information such as API keys or passwords if present in your history. Use with care
 
+## Extra Logging
+
+The plugin will log extra data (such as what is piped by cliseer) to `/tmp/cliseer/`.  The data stored there should be deleted on every restart with most operating systems.
+
 ## Support and Contribution
 
 - GitHub: [https://github.com/cliseer/cliseer-fish](https://github.com/cliseer/cliseer-fish)
