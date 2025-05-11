@@ -2,13 +2,21 @@
 
 Press `Ctrl+Space` in your terminal to activate AI powered command line suggestions.
 
-[![asciicast](https://asciinema.org/a/ce9fH13HQVyqhWg67qH0Fa1Mo.svg)](https://asciinema.org/a/ce9fH13HQVyqhWg67qH0Fa1Mo)
+![Demo](./.github/demo.gif)
 
-## Features
+CLISeer helps you
 
-* Context-aware command suggestions
-* Lightweight, only use CLISeer when you want it. Doesn't clutter up your terminal
-* Quick step
+- **Remember complex syntax** without googling or chatgpt-ing
+- **Discovery command options** you didn't know existed
+- **Explain commands** in plain English
+
+It only runs when invoked and hides suggestions after they are generated so it doesn't modify the default fish experience.
+
+## How it works
+
+Simply start typing in a command and at any point press `Ctrl-Space` for recommendations.  It will generate recommendations based on your current command buffer, command history, operating information, and previous command statuses.
+
+Either select a recommendation or press `Ctrl-Space` again to exit.
 
 ## Installation
 
@@ -23,8 +31,11 @@ fisher install cliseer/cliseer-fish
 git clone https://github.com/cliseer/cliseer-fish
 fish install.fish
 ```
-
 Both installation methods will prompt you to install required dependencies.
+
+Make sure you have pip installed for the dependencies to install correctly.
+
+Alternatively, if you don't have pip you can checkout https://github.com/cliseer/cliprophesy and use the install script.
 
 ## Configuration
 
@@ -51,7 +62,7 @@ By default, CLISeer uses the `cliseer` provider, which offers a rate-limited num
 
 **Important:** When invoked CLISeer sends the following data to the configured AI provider when
 
-- Your current and recent Fish shell commands (~20 lines)
+- Your current and recent Fish shell commands
 - Operating system and shell information
 - Previous command exit codes
 
