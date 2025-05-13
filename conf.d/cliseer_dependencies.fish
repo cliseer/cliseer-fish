@@ -69,7 +69,7 @@ function _config_dependency --on-event cliseer_dependencies_install
      if test -f ~/.config/cliseer/settings.cfg
         return 0
      end
-     mkdir -p ~/.config/cliseer/settings.cfg
+     mkdir -p ~/.config/cliseer/
      curl https://gist.githubusercontent.com/ygreif/f9879149afbe2382006c867fe099dce8/raw/6874a3989e4bf2886183cf94ee743d399beebd40/gistfile1.txt > ~/.config/cliseer/settings.cfg
      echo "Cliseer configuration file created at ~/.config/cliseer/settings.cfg. Edit this file to customize behavior."
      return 0
