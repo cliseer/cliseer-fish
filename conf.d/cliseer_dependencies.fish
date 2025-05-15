@@ -96,3 +96,14 @@ function _cliseer_fzf_dependency --on-event cliseer_dependencies_install
        
      return 0
 end
+
+function _cliseer_iterm2_warning --on-event cliseer_dependencies_install
+     set os (uname)
+     if test "$os" = "Darwin"
+        if test -n "$ITERM_SESSION_ID"
+            echo "⚠️  Warning: You're using iTerm2 where Ctrl+Space might be reserved by the system."
+            echo "   If keybindings don't work, check iTerm2 preferences or use an alternative key binding."
+        end
+     end
+     return 0
+end
