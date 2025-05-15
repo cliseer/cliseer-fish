@@ -70,14 +70,15 @@ function _config_dependency --on-event cliseer_dependencies_install
         return 0
      end
      mkdir -p ~/.config/cliseer/
-     curl https://gist.githubusercontent.com/ygreif/f9879149afbe2382006c867fe099dce8/raw/6874a3989e4bf2886183cf94ee743d399beebd40/gistfile1.txt > ~/.config/cliseer/settings.cfg
-     echo "Cliseer configuration file created at ~/.config/cliseer/settings.cfg. Edit this file to customize behavior."
+     curl -L https://github.com/cliseer/cliprophesy/releases/download/v0.1.3/settings.cfg -o ~/.config/cliseer/settings.cfg
+     echo "Cliseer configuration file created at ~/.config/cliseer/settings.cfg"
+     echo "Edit settings.cfg to change the AI provider"
      return 0
 end
 
 function _cliseer_fzf_dependency --on-event cliseer_dependencies_install
      if type -q fzf
-        echo "fzf is already installed"
+        #echo "fzf is already installed"
         return 0
      end
      echo "fzf, command-line fuzzy finder, is required"
