@@ -18,6 +18,15 @@ Simply start typing in a command and at any point press `Ctrl-Space` for recomme
 
 Either select a recommendation or press `Ctrl-Space` again to exit.
 
+### iTerm2 Users
+
+If you're using iTerm2, you may need to modify your key mappings as `Ctrl+Space` might be reserved by the terminal. You can either:
+
+1. Change iTerm2's settings to pass `Ctrl+Space` to the application
+2. Configure a different keybinding for CLISeer in the fish configuration
+
+To change iTerm2 settings, go to Preferences → Profiles → Keys, and add a new key mapping for `Ctrl+Space` with the action "Send Hex Code" and value "0x20" (space character).
+
 ## Installation
 
 ### Option 1: Using fisher
